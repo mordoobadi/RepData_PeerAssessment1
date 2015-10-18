@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 
 
 ## Loading and preprocessing the data
@@ -51,7 +56,7 @@ hist(totalStepsPerDay$steps,
      main = "Total Number of Steps Each Day")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png) 
 
 Calculating mean and median of of the total number of steps per day.
 
@@ -112,7 +117,7 @@ plot(stepsPerInterval$interval,
      main = "Average Daily Number of Steps by Interval")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-6-1.png) 
+![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png) 
 
 ####Plotting data by time of day
 
@@ -127,7 +132,7 @@ plot(stepsPerInterval$intervalContiguous,
      main = "Average Daily Number of Steps by Time of Day")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-7-1.png) 
+![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7-1.png) 
 
 
 ```r
@@ -206,7 +211,7 @@ Plotting a histogram of total number of steps taken each day.
 hist(totalStepsPerDay$steps, col = "blue", xlab = "Number of Steps", main = "Total Number of Steps Each Day")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-13-1.png) 
+![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13-1.png) 
 
 Calculating mean and median of of the total number of steps per day.
 
@@ -258,10 +263,11 @@ ggplot(stepsPerInterval, aes(x = interval, y = steps)) +
   xlab("Interval") + 
   ylab("Number of Steps") + 
   geom_line() + 
-  facet_grid(daytype~.)
+  facet_grid(daytype~.) + 
+  ggtitle("Average Daily Activity for Weekdays and Weekends by Interval") 
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-17-1.png) 
+![plot of chunk unnamed-chunk-17](figure/unnamed-chunk-17-1.png) 
 
 ####Plotting data by time of day
 
@@ -272,10 +278,10 @@ ggplot(stepsPerInterval, aes(x = intervalContiguous, y = steps)) +
   ylab("Number of Steps") + 
   geom_line() + 
   facet_grid(daytype~.) + 
-  ggtitle("Average daily activity for weekdays and weekends") 
+  ggtitle("Average Daily Activity for Weekdays and Weekends by Time of Day") 
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-18-1.png) 
+![plot of chunk unnamed-chunk-18](figure/unnamed-chunk-18-1.png) 
 
 
 Based on the above diagrams we see that the patterns for weekday and weekend daily activities are different.

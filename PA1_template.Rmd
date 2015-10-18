@@ -177,8 +177,8 @@ ggplot(stepsPerInterval, aes(x = interval, y = steps)) +
   xlab("Interval") + 
   ylab("Number of Steps") + 
   geom_line() + 
-  facet_grid(daytype~.)
-
+  facet_grid(daytype~.) + 
+  ggtitle("Average Daily Activity for Weekdays and Weekends by Interval") 
 ```
 
 ####Plotting data by time of day
@@ -189,7 +189,7 @@ ggplot(stepsPerInterval, aes(x = intervalContiguous, y = steps)) +
   ylab("Number of Steps") + 
   geom_line() + 
   facet_grid(daytype~.) + 
-  ggtitle("Average daily activity for weekdays and weekends") 
+  ggtitle("Average Daily Activity for Weekdays and Weekends by Time of Day") 
 ```
 
 
